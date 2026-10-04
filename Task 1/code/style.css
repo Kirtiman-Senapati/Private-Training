@@ -122,9 +122,26 @@ img{
 
 }
 
+#btn0:hover{
+    background-color:#3375ec;
+   color:#ffffff;
+   border:none;
+}
+
 #btn2{
     background-color:#3375ec;
     color:#ffffff
+}
+
+#btn2:hover{
+    background-color:#ffffff;
+    color:black;
+}
+
+#btn1:hover{
+    background-color:#3375ec;
+   color:#ffffff;
+   border:none;
 }
 
 .services{
@@ -148,3 +165,4 @@ img{
 
 
 }
+
