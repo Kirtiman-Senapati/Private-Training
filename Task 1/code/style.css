@@ -15,10 +15,7 @@ h{
     font-family: sans-serif;
     
 }
-p{
-    font-size:medium;
-    font-family: sans-serif;
-}
+
 .navbar{
 margin:18px;
 }
@@ -60,40 +57,79 @@ img{
 
 .hero-text{
     position:absolute;
-    text-align: center;
+    text-align: left;
     padding: 20px;
-    bottom: 30%;
+    bottom: 40%;
     right: 70%;
+    color:#ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 40px;
+
 }
 
 .hero-text h1{
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 1.2;
   
 }
 
 .hero-text p{
-    margin-bottom: 25px;
+    margin: 20px,0px,0px;
+    font-size:20px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.1px;
 }
 
 .hero-text button {
-    padding: 10px 20px;
-    margin-right: 12px;  
+    padding: 15px 30px;
+    margin-top: 35px; 
+    margin-right:28px; 
     cursor: pointer;
     border:none;
+    justify-content: center;
+    border-radius: 40px;
+
+
 }
 
 #btn0{
     cursor: pointer;
-    padding: 10px 20px;  
+    padding: 15px 30px; 
     border: none;
     margin-left:40%; 
-    background-color:darkgrey;
+    background-color:#24a0ed;
     border-radius: 40px;
+    justify-content: center;
+    
 
 
 }
 
 #btn2{
     background-color:#24a0ed;
+}
+
+.services{
+    margin:50px;
+    text-align: center;
+}
+
+.services h2{
+    margin:10px;
+}
+
+#btn3{
+
+    background-color:#7579ffdb;
     border-radius: 40px;
+    padding: 10px 20px;
+    border:none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+
+
+
 }
