@@ -114,18 +114,17 @@ img{
 #btn0{
     cursor: pointer;
     padding: 15px 30px; 
-    border: none;
     margin-left:40%; 
-    background-color:#24a0ed;
+    border-color:#3375ec;
     border-radius: 40px;
     justify-content: center;
-    
-
+    background-color:#ffffff
 
 }
 
 #btn2{
-    background-color:#24a0ed;
+    background-color:#3375ec;
+    color:#ffffff
 }
 
 .services{
