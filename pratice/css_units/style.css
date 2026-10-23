@@ -7,39 +7,92 @@ body{
     background-color: #212121;
     color:#ffffff9f;
     border:1px solid red;
-    width:50%;
-   
 }
 
-h1{
+/* ===================== CSS UNITS ===================== */
+
+/*
+1. ABSOLUTE / FIXED UNITS
+px  -> Screen pixels par based; borders aur precise spacing ke liye useful
+rem -> Root element (<html>) ke font-size ke relative
+em  -> Parent ya current element ke font-size ke relative
+
+2. RELATIVE / RESPONSIVE UNITS
+%    -> Parent element ki corresponding property ke relative
+vw   -> viewport width ka 1%
+vh   -> viewport height ka 1%
+vmin -> viewport ke chhote dimension ka 1%
+vmax -> viewport ke bade dimension ka 1%
+ch   -> Current font ke '0' character ki width ke relative
+*/
+
+/* :root ka font-size rem unit ka base hai */
+:root {
+    font-size: 16px; /* 1rem = 16px */
+}
+
+h1 {
+    /* px: fixed absolute unit */
     margin: 30px;
+    padding: 0.75rem; /* 0.75 * 16px = 12px */
+    font-size: clamp(1.5rem, 4vw, 3rem);
+
     text-align: center;
     border: 2px solid green;
     border-radius: 15px;
 }
 
-p{
-    margin: 66px;
-    text-align: left;
-    line-height: 20px;
-    font-family:Arial, Helvetica, sans-serif Arial, sans-serif;
-    font-weight: 100;
-    border: 1px solid blue;
-    background-color:grey;
-    color: #000;
-    padding: 15px;
+p {
+    /* %: parent .wrapper ki content width ka 50% */
     width: 50%;
-    
-}
-.wrapper
-{
-    background-color:rgb(4, 57, 57);
-    width: 70%;
+
+    margin: 66px;
+    padding: 15px;
+
+    /* rem/em: scalable text measurements */
+    line-height: 1.25rem;
+    font-size: 1em; /* p ka inherited font-size */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+
+    border: 1px solid blue;
+    background-color: grey;
+    color: #000;
 }
 
-.container p{
-    width: 30%;
+.wrapper {
+    /* % ka matlab parent body ki width ka 70% */
+    width: 70%;
+    min-height: 50vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: rgb(4, 57, 57);
 }
+
+/* calc() absolute aur relative units ko combine karta hai */
+.ch-example {
+    /*
+    100%: demo-box ke parent ki available width ka poora size
+    2rem: root font-size ke 2 guna (16px ke base par 32px)
+
+    Isliye width, parent ki width se 32px kam rahegi.
+    calc() ka use percentage aur rem jaise alag units ko saath mein
+    calculate karne ke liye hota hai; 100% - 2rem ek valid operation hai.
+    */
+    width: calc(100% - 2rem);
+    height: 20vh;
+    padding: 1em;
+    border: 1px solid white;
+}
+
+/* Clamp: minimum, preferred aur maximum size define karta hai */
+.responsive-text {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
 
 
 /* percentage relative units always consider Parent unit pare unit ke basis per child unit bada ya chota hota hai matlab yadi wrapper ne liya widhth jitna p uske andar hai 50% yadi hai hai toh woh wrapper ka width ka 50% lega na ki poori body ka  */
+
+
+
